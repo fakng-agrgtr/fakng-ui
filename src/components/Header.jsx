@@ -1,10 +1,7 @@
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import * as React from 'react';
+import {
+  AppBar, Box, Button, Container, Toolbar, Typography,
+} from '@mui/material';
+import React from 'react';
 
 const pages = ['Home', 'Careers'];
 
