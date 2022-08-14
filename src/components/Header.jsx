@@ -36,6 +36,7 @@ function App() {
               <Button
                 key={page}
                 sx={{ my: 2, color: 'white', display: 'block' }}
+                href={`/${page.toLowerCase()}`}
               >
                 {page}
               </Button>
