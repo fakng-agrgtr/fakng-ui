@@ -23,5 +23,6 @@ module.exports = {
     'no-unused-vars': 'warn',
     'simple-import-sort/imports': 'warn',
     'simple-import-sort/exports': 'warn',
+    'import/no-unresolved': 'off',
   },
 };
