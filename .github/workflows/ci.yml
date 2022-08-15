@@ -26,3 +26,8 @@ jobs:
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    - name: Remove old build artifact
+      uses: geekyeggo/delete-artifact@v1
+      with:
+        name: ${{ github.head_ref }}
+        failOnError: false
