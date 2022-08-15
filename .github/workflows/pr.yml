@@ -30,7 +30,8 @@ jobs:
       with:
         name: ${{ github.head_ref }}
         failOnError: false
-    - uses: actions/upload-artifact@v3
+    - name: Create new build artifact
+      uses: actions/upload-artifact@v3
       with:
         name: ${{ github.head_ref }}
         path: build/**/*
