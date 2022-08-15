@@ -1,13 +1,3 @@
-# Deploy
-
-Run docker image
-
-```
-$ docker run -it --rm -d -p 8080:80 --name web webserver
-```
-
-Open your browser and navigate to http://localhost:8080 to make sure our html page is being served correctly.
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
