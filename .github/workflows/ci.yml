@@ -9,10 +9,10 @@ on:
     branches: [ "master" ]
 
 jobs:
+  call-pr-workflow:
+    uses: ./.github/workflows/pr.yml
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - name: Get build
       uses: actions/download-artifact@v3
