@@ -69,7 +69,7 @@ jobs:
           wait-for-processing: true
 
   codeql:
-    name: Run github code scanning
+    name: Run CodeQL
     runs-on: ubuntu-latest
 
     permissions:
