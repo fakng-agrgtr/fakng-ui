@@ -1,6 +1,8 @@
 name: Build CI
 
 on:
+  pull_request:
+    types: [ opened, reopened ]
   pull_request_review:
     types: [ submitted ]
 
