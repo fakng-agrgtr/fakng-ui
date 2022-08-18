@@ -25,5 +25,6 @@ module.exports = {
     'simple-import-sort/imports': 'warn',
     'simple-import-sort/exports': 'warn',
     'linebreak-style': 'off',
+    'import/no-unresolved': 'off',
   },
 };

@@ -1,29 +1,44 @@
-import './App.css';
+import 'src/assets/styles/_global.scss';
 
-import React from 'react';
+import CssBaseline from '@mui/material/CssBaseline';
+import React, { useEffect, useState } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import Header from 'src/components/Header';
+import Home from 'src/pages/home';
 
-import logo from './logo.svg';
+import LinearIndeterminate from './components/Loader';
+import Careers from './pages/careers';
 
 function App() {
+  const [progress, setProgress] = useState(true);
+  const [prevLoc, setPrevLoc] = useState('');
+  const location = useLocation();
+
+  useEffect(() => {
+    setPrevLoc(location.pathname);
+    setProgress(true);
+    if (location.pathname === prevLoc) {
+      setPrevLoc('');
+    }
+  }, [location]);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setProgress(false);
+    }, 700);
+  }, [prevLoc]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit
-          <code>src/App.js</code>
-          and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Header />
+      {progress ? <LinearIndeterminate /> : (
+        <Routes>
+          <Route exact path="/" element={<Home tabTitle="Fakng - Home page" />} />
+          <Route path="careers" element={<Careers tabTitle="Fakng - Careers page" />} />
+        </Routes>
+      )}
+    </>
   );
 }
 
