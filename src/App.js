@@ -1,41 +1,21 @@
 import 'src/assets/styles/_global.scss';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import React, { useEffect, useState } from 'react';
-import { Route, Routes, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Header from 'src/components/Header';
+import routes from 'src/router/routes';
 
-import LinearIndeterminate from './components/Loader';
 import Careers from './pages/careers';
 
 function App() {
-  const [progress, setProgress] = useState(true);
-  const [prevLoc, setPrevLoc] = useState('');
-  const location = useLocation();
-
-  useEffect(() => {
-    setPrevLoc(location.pathname);
-    setProgress(true);
-    if (location.pathname === prevLoc) {
-      setPrevLoc('');
-    }
-  }, [location]);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setProgress(false);
-    }, 700);
-  }, [prevLoc]);
-
   return (
     <>
       <CssBaseline />
       <Header />
-      {progress ? <LinearIndeterminate /> : (
-        <Routes>
-          <Route path="careers" element={<Careers tabTitle="Fakng - Careers page" />} />
-        </Routes>
-      )}
+      <Routes>
+        <Route path={routes.careers} element={<Careers tabTitle="Fakng - Careers page" />} />
+      </Routes>
     </>
   );
 }
