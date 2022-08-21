@@ -4,9 +4,8 @@ import CssBaseline from '@mui/material/CssBaseline';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from 'src/components/Header';
+import Careers from 'src/pages/careers';
 import routes from 'src/router/routes';
-
-import Careers from './pages/careers';
 
 function App() {
   return (
