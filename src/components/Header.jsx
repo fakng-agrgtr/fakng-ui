@@ -6,7 +6,7 @@ import * as React from 'react';
 
 function App() {
   return (
-    <AppBar position="static">
+    <AppBar sx={{ mb: 5 }} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
