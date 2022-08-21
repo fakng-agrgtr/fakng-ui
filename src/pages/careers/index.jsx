@@ -1,10 +1,10 @@
 import 'src/pages/careers/Careers.scss';
 
 import Container from '@mui/material/Container';
+import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import Careers from 'src/components/Careers';
 
-// eslint-disable-next-line react/prop-types
 export default function CareersPage({ tabTitle }) {
   useEffect(() => {
     document.title = tabTitle;
@@ -16,3 +16,11 @@ export default function CareersPage({ tabTitle }) {
     </Container>
   );
 }
+
+CareersPage.propTypes = {
+  tabTitle: PropTypes.string,
+};
+
+CareersPage.defaultProps = {
+  tabTitle: '',
+};
