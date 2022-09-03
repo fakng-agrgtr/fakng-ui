@@ -7,11 +7,11 @@ import * as React from 'react';
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
-  background: theme.palette.primary.light,
+  border: `1px solid ${theme.palette.common.black}`,
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
-  color: theme.palette.common.white,
+  color: theme.palette.common.black,
   padding: theme.spacing(0, 2),
   height: '100%',
   position: 'absolute',
@@ -23,7 +23,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: theme.palette.common.white,
+  color: theme.palette.common.black,
   width: '100%',
   padding: theme.spacing(0.5, 1),
   paddingRight: `calc(1em + ${theme.spacing(4)})`,
