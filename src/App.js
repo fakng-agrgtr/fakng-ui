@@ -13,7 +13,7 @@ function App() {
       <CssBaseline />
       <Header />
       <Routes>
-        <Route path={routes.careers} element={<Careers tabTitle="Fakng - Careers page" />} />
+        <Route path={routes.careers} element={<Careers tabTitle="Careers page" />} />
       </Routes>
     </>
   );
