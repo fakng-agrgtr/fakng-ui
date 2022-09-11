@@ -26,5 +26,6 @@ module.exports = {
     'simple-import-sort/exports': 'warn',
     'linebreak-style': 'off',
     'import/no-unresolved': 'off',
+    'react/react-in-jsx-scope': 'off',
   },
 };
